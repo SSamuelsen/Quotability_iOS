@@ -16,7 +16,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)     //get size of device
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc: UIViewController
+        
+        if(UserDefaults.standard.value(forKey: "firstStart") as? String) == nil {
+            //show onboarding screen if dont have value
+            vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+        }
+        else {
+            
+            vc = storyboard.instantiateInitialViewController()!
+            
+        }
+        
+        
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()        //shows window and makes it the key window
+        
+        
+        
+        
+        
         return true
     }
 
@@ -90,4 +112,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+
+let ad = UIApplication.shared.delegate as! AppDelegate          //creating a path to the app delegate that will allow to use saveContext() function
+let context = ad.persistentContainer.viewContext
+
+
 
