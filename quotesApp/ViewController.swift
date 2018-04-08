@@ -133,7 +133,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var quoteTableView: UITableView!
     @IBOutlet weak var segment: UISegmentedControl!
     
-
+    @IBOutlet weak var refreshQOD: UIButton!
+    
     
     
     
@@ -767,6 +768,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
+    @IBAction func refreshQODPressed(_ sender: Any) {
+        
+        
+        attemptFetch()
+        displayDailyQuote()
+        
+        
+        
+        
+    }
     
    
     
