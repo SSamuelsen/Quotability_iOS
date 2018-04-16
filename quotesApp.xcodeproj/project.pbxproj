@@ -46,6 +46,7 @@
 		6286786220707AA800CE704F /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6286784520707AA800CE704F /* AsyncImageView.swift */; };
 		6286786420707C2B00CE704F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6286786320707C2B00CE704F /* LICENSE */; };
 		6286786620707C3500CE704F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6286786520707C3500CE704F /* README.md */; };
+		6299E7D5207BE7AE00B96F35 /* Righteous in Resources */ = {isa = PBXBuildFile; fileRef = 6299E7D4207BE7AE00B96F35 /* Righteous */; };
 		62B4296A205C46BD0087C97C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B42969205C46BD0087C97C /* Cell.swift */; };
 		62B4296C205C49D10087C97C /* QuoteCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B4296B205C49D10087C97C /* QuoteCellStyle.swift */; };
 		62B429752062CE8C0087C97C /* SavedQuote+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B429732062CE8C0087C97C /* SavedQuote+CoreDataClass.swift */; };
@@ -122,7 +123,7 @@
 		6286784520707AA800CE704F /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		6286786320707C2B00CE704F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = "../../../../Downloads/Spring-master/LICENSE"; sourceTree = "<group>"; };
 		6286786520707C3500CE704F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "../../../../Downloads/Spring-master/README.md"; sourceTree = "<group>"; };
-		62A65EFE206D6F6400FCB6E2 /* Besom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Besom.ttf; path = ../../../Downloads/Besom.ttf; sourceTree = "<group>"; };
+		6299E7D4207BE7AE00B96F35 /* Righteous */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Righteous; path = ../../../Downloads/Righteous; sourceTree = "<group>"; };
 		62B42969205C46BD0087C97C /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		62B4296B205C49D10087C97C /* QuoteCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCellStyle.swift; sourceTree = "<group>"; };
 		62B429732062CE8C0087C97C /* SavedQuote+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedQuote+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -282,7 +283,7 @@
 		62F4D712204E4432000AA10A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				62A65EFE206D6F6400FCB6E2 /* Besom.ttf */,
+				6299E7D4207BE7AE00B96F35 /* Righteous */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -355,7 +356,7 @@
 				TargetAttributes = {
 					625CB2542047335C00BFF1F8 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					625CB26B2047335C00BFF1F8 = {
 						CreatedOnToolsVersion = 9.2;
@@ -397,6 +398,7 @@
 				6286786420707C2B00CE704F /* LICENSE in Resources */,
 				625CB2662047335C00BFF1F8 /* LaunchScreen.storyboard in Resources */,
 				6286785A20707AA800CE704F /* LoadingView.xib in Resources */,
+				6299E7D5207BE7AE00B96F35 /* Righteous in Resources */,
 				6286786620707C3500CE704F /* README.md in Resources */,
 				625CB2632047335C00BFF1F8 /* Assets.xcassets in Resources */,
 				6286786120707AA800CE704F /* Info.plist in Resources */,
@@ -630,12 +632,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 45V5BCUC3A;
 				INFOPLIST_FILE = quotesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ssamuelsen.quotesApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "96879bd5-f552-4488-968a-cde0924b8126";
+				PROVISIONING_PROFILE_SPECIFIER = QuotabilityProvisioningDevelopment;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -645,12 +650,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 45V5BCUC3A;
 				INFOPLIST_FILE = quotesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ssamuelsen.quotesApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5fd99eeb-96b4-4bd8-bea3-224d5e00df87";
+				PROVISIONING_PROFILE_SPECIFIER = QuotabilityProvisioningDistribution;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

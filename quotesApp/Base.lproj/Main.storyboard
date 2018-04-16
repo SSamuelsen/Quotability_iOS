@@ -19,61 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrb-j3-1fI" customClass="DesignableTextView" customModule="quotesApp" customModuleProvider="target">
-                                <rect key="frame" x="145" y="135" width="153" height="187"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.95686274510000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="19"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-uo-zLu" customClass="SpringButton" customModule="quotesApp" customModuleProvider="target">
-                                <rect key="frame" x="55" y="247" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.47843137250000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="+_+">
-                                    <color key="titleColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="37.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="repeatCount">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="swing"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeInOut"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="addQuoteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XfG-MY-JbX"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gn9-qw-XC4" customClass="SpringButton" customModule="quotesApp" customModuleProvider="target">
                                 <rect key="frame" x="48" y="394" width="224" height="147"/>
                                 <constraints>
@@ -99,11 +44,79 @@
                                     <action selector="introButtonPressed:" destination="TJw-Ve-Z1n" eventType="touchUpInside" id="Iaj-Jw-e55"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="2d8-D7-hyw">
+                                <rect key="frame" x="38" y="190.5" width="245" height="187"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-uo-zLu" customClass="SpringButton" customModule="quotesApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="112" width="75" height="75"/>
+                                        <color key="backgroundColor" red="1" green="0.47843137250000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="3qb-dg-K1F"/>
+                                            <constraint firstAttribute="width" constant="75" id="s1k-8y-Vxm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="+_+">
+                                            <color key="titleColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="37.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="repeatCount">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="swing"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeInOut"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addQuoteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XfG-MY-JbX"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrb-j3-1fI" customClass="DesignableTextView" customModule="quotesApp" customModuleProvider="target">
+                                        <rect key="frame" x="92" y="0.0" width="153" height="187"/>
+                                        <color key="backgroundColor" red="1" green="0.95686274510000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="187" id="56n-Sx-XFm"/>
+                                            <constraint firstAttribute="width" constant="153" id="ebI-1W-sl9"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="19"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.5568627451" green="0.82352941180000006" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gn9-qw-XC4" firstAttribute="centerX" secondItem="UQ6-54-byV" secondAttribute="centerX" id="8or-iF-xf3"/>
                             <constraint firstItem="AGT-d9-I3s" firstAttribute="bottom" secondItem="gn9-qw-XC4" secondAttribute="bottom" constant="27" id="g4h-tg-HI2"/>
+                            <constraint firstItem="2d8-D7-hyw" firstAttribute="centerX" secondItem="UQ6-54-byV" secondAttribute="centerX" id="kcw-gs-KWS"/>
+                            <constraint firstItem="2d8-D7-hyw" firstAttribute="centerY" secondItem="UQ6-54-byV" secondAttribute="centerY" id="l4g-7B-t32"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AGT-d9-I3s"/>
                     </view>
@@ -216,24 +229,24 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="th0-he-Cva" customClass="View" customModule="quotesApp" customModuleProvider="target">
                                 <rect key="frame" x="6" y="400" width="308" height="500"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkr-gT-zLb">
-                                        <rect key="frame" x="8" y="47" width="292" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Up " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkr-gT-zLb">
+                                        <rect key="frame" x="8" y="47" width="292" height="19"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote of the Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2r-Bd-B88">
-                                        <rect key="frame" x="51" y="18" width="207" height="21"/>
+                                        <rect key="frame" x="51" y="18" width="207" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="207" id="Ny8-jf-37P"/>
-                                            <constraint firstAttribute="height" constant="21" id="SOt-N0-Ttj"/>
+                                            <constraint firstAttribute="height" constant="31" id="SOt-N0-Ttj"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcn-0t-Eua">
-                                        <rect key="frame" x="42" y="55" width="224" height="0.0"/>
+                                        <rect key="frame" x="42" y="74" width="224" height="0.0"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -247,9 +260,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP9-Kb-Se1">
-                                        <rect key="frame" x="32.5" y="82" width="243" height="30"/>
-                                        <state key="normal" title="Quote not displaying? Refresh now!"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP9-Kb-Se1" customClass="DesignableButton" customModule="quotesApp" customModuleProvider="target">
+                                        <rect key="frame" x="99" y="102" width="110" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="STp-NH-GU8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Refresh Now!">
+                                            <color key="titleColor" red="1" green="0.47843137250000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.47843137250000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="refreshQODPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Fi-FC-7FA"/>
                                         </connections>
@@ -268,8 +298,8 @@
                                     <constraint firstItem="hcn-0t-Eua" firstAttribute="leading" secondItem="th0-he-Cva" secondAttribute="leading" constant="42" id="EbK-Ei-PWQ"/>
                                     <constraint firstItem="hcn-0t-Eua" firstAttribute="centerX" secondItem="xkr-gT-zLb" secondAttribute="centerX" id="GPt-Cf-Doy"/>
                                     <constraint firstItem="xkr-gT-zLb" firstAttribute="leading" secondItem="th0-he-Cva" secondAttribute="leadingMargin" id="HKa-Lj-fPx"/>
-                                    <constraint firstItem="xkr-gT-zLb" firstAttribute="top" secondItem="c2r-Bd-B88" secondAttribute="bottom" constant="8" symbolic="YES" id="IGM-Cv-WO2"/>
-                                    <constraint firstItem="aP9-Kb-Se1" firstAttribute="top" secondItem="hcn-0t-Eua" secondAttribute="bottom" constant="27" id="atP-bm-nQR"/>
+                                    <constraint firstItem="xkr-gT-zLb" firstAttribute="top" secondItem="c2r-Bd-B88" secondAttribute="bottom" constant="-2" id="IGM-Cv-WO2"/>
+                                    <constraint firstItem="aP9-Kb-Se1" firstAttribute="top" secondItem="hcn-0t-Eua" secondAttribute="bottom" constant="28" id="atP-bm-nQR"/>
                                     <constraint firstAttribute="trailing" secondItem="zSB-et-YeG" secondAttribute="trailing" constant="60" id="brN-2M-cXx"/>
                                     <constraint firstItem="hcn-0t-Eua" firstAttribute="centerX" secondItem="c2r-Bd-B88" secondAttribute="centerX" id="eZq-3o-trb"/>
                                     <constraint firstAttribute="trailing" secondItem="c2r-Bd-B88" secondAttribute="trailing" constant="50.5" id="tCV-e9-1eo"/>
@@ -282,8 +312,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1wa-ZV-o9Y" userLabel="addQuoteBox" customClass="SpringView" customModule="quotesApp" customModuleProvider="target">
-                                <rect key="frame" x="400" y="0.0" width="300" height="568"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wa-ZV-o9Y" userLabel="addQuoteBox" customClass="SpringView" customModule="quotesApp" customModuleProvider="target">
+                                <rect key="frame" x="1200" y="0.0" width="300" height="568"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TOS-Qu-4ep">
                                         <rect key="frame" x="41" y="62" width="218" height="344"/>
@@ -404,8 +434,8 @@
                         <constraints>
                             <constraint firstItem="1wa-ZV-o9Y" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0GA-na-CzV"/>
                             <constraint firstItem="iTp-x6-BHB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3h3-sH-EIh"/>
-                            <constraint firstItem="1wa-ZV-o9Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="415" id="5Ev-Yz-wBC"/>
-                            <constraint firstItem="1wa-ZV-o9Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="395" id="6c3-LF-cQD"/>
+                            <constraint firstItem="1wa-ZV-o9Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="1200" id="5Ev-Yz-wBC"/>
+                            <constraint firstItem="1wa-ZV-o9Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="1180" id="6c3-LF-cQD"/>
                             <constraint firstItem="Wsc-6b-rqU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="7NI-I9-Wq5"/>
                             <constraint firstItem="x6H-gd-jc2" firstAttribute="top" secondItem="iTp-x6-BHB" secondAttribute="bottom" constant="93" id="7dP-hS-27V"/>
                             <constraint firstItem="x6H-gd-jc2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E6G-37-Gbh"/>
